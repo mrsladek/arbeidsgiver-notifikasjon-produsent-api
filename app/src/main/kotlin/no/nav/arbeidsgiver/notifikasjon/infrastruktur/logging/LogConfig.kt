@@ -47,7 +47,7 @@ class LogConfig : ContextAwareBase(), Configurator {
         lc.getLogger("io.netty").level = Level.INFO
 
         if (naisCluster == null || naisCluster == "dev-gcp") {
-            lc.getLogger("io.ktor.auth.jwt").level = Level.INFO
+            lc.getLogger("io.ktor.auth.jwt").level = Level.TRACE
         }
         return ExecutionStatus.DO_NOT_INVOKE_NEXT_IF_ANY
     }
